@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pl">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<title>Loan Calculator</title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 mx-auto">
+				<main>
+					<div class="card card-body m-3">
+						<h1 class="heading pb-3 text-center text-success ">Kalkulator kredytowy</h1>
+						<!--form-->
+						<form id="loan-form">
+							<div class="form-group">
+								<label for="amount">Kwota kredytu</label>
+								<input type="text" class="form-control" min="100" id="amount" placeholder="">
+							</div>
+							<div class="form-group">
+								<label for="interest">Oprocentowanie</label>
+								<input type="text" class="form-control" min="1" id="interest" placeholder="">
+							</div>
+							<div class="form-group">
+								<label for="years">Okres kredytu (w latach)</label>
+								<input type="text" class="form-control" min="1" id="years" placeholder="">
+							</div>
+							<div class="form-group">
+								<input type="submit" value="Oblicz" name="" id="" class="btn btn-success"> <button type="button" class="btn btn-danger" id="clear-btn">Wyczyść</button>
+							</div>
+						</form>
+						<!-- results -->
+						<div id="results" class="pt-4">
+							<h3 class="text-info">Wynik:</h3>
+							<div class="form-group">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text text-danger">Rata miesięczna</span>
+									</div>
+									<input type="number" class="form-control" id="monthly-payment" disabled>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text text-danger">Suma spłat</span>
+									</div>
+									<input type="number" class="form-control" id="total-payment" disabled>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text text-danger">Odsetki</span>
+									</div>
+									<input type="number" class="form-control" id="total-interest" disabled>
+								</div>
+							</div>
+						</div>
+					</div>
+				</main>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<p class="text-center">&copy; Jarosław Terejko 2018</p>
+	</footer>
+	<script src="scripts.js "></script>
+</body>
+
+</html>
